@@ -1,0 +1,28 @@
+<form class="filter-form-object">
+    <ol>
+        <li *ngFor="let filter of filterList.list; let i = index" class="filter-container">
+            <div [attr.filter-index]="i" class="filter-object">
+                <div class="filter-label col" *ngIf="filter.col">
+                    {{filter.col}}
+                </div>
+                <div class="filter-label operator" *ngIf="filter.operator">
+                    {{filter.operator}}
+                </div>
+                <div class="filter-label value" *ngIf="filter.value" (click)="editFilterObject(i)">
+                    {{filter.value}}
+                </div>
+                <div class="filter-label remove" *ngIf="filter.value" (click)="removeFilterObject(i)">
+                    <mat-icon>close</mat-icon>
+                </div>
+                <div *ngIf="filter.state !== 'confirmed'">
+                    <input type="text" [formControl]="formControl" [matAutocomplete]="filter" (keyup)="formValidation($event)" placeholder="Add filter">
+                    <mat-autocomplete #filter="matAutocomplete">
+                        <mat-option *ngFor="let option of formAutocomplete" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </div>
+            </div>
+        </li>
+    </ol>
+</form>

@@ -1,0 +1,55 @@
+form {
+    font-size: 14px;
+    border-bottom: 1px solid darkgrey;
+}
+form ol {
+    margin: 4px;
+    padding: 0;
+    list-style: outside none none;
+}
+li .filter-object {
+    margin: 0 4px 4px 0;
+}
+form li div:not(.filter-object){
+    display: inline-block;
+    margin: 0 2px 2px 0;
+    padding: 0 8px;
+}
+.filter-container {
+    display: inline-block;
+}
+.filter-label {
+    border: 1px solid #363d4d;
+}
+.filter-label:not(.remove) {
+    max-width: calc(100% - 42px);
+}
+.filter-label:first-child {
+    border-radius: 2px 0 0 2px;
+}
+.filter-label:last-child {
+    border-radius: 0 2px 2px 0;
+}
+.filter-label.remove {
+    padding: 0 !important;
+}
+
+form mat-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+form input {
+    height: 20px;
+    border: none;
+}
+
+form [filter-instance=term] div.filter-label {
+    background-color: purple;
+    color: white;
+}
+form [filter-instance=object] div.filter-label {
+    background-color: powderblue;
+}
