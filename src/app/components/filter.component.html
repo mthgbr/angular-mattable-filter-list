@@ -14,7 +14,7 @@
                 <div class="filter-label remove" *ngIf="filter.value" (click)="removeFilterObject(i)">
                     <mat-icon>close</mat-icon>
                 </div>
-                <div *ngIf="filter.state !== 'confirmed'">
+                <div *ngIf="filterList.state !== 'confirmed'">
                     <input type="text" [formControl]="formControl" [matAutocomplete]="filter" (keyup)="formValidation($event)" placeholder="Add filter">
                     <mat-autocomplete #filter="matAutocomplete">
                         <mat-option *ngFor="let option of formAutocomplete" [value]="option">

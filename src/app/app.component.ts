@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Filters } from './filter.component';
+import { Filters } from './components/filter.component';
 
 export interface MatData {
   name: string;

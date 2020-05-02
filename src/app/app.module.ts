@@ -11,10 +11,11 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { FilterComponent } from './filter.component';
+import { FilterComponent } from './components/filter.component';
 
 @NgModule({
-  imports:      [ 
+  declarations: [ AppComponent, FilterComponent ],
+  imports: [ 
     BrowserModule, 
     FormsModule,
     MatTableModule,
@@ -27,7 +28,6 @@ import { FilterComponent } from './filter.component';
   exports: [
     FilterComponent
   ],
-  declarations: [ AppComponent, FilterComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
